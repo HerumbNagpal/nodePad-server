@@ -47,7 +47,7 @@ app.post("/signUp", async (req, res) => {
     const existingUser = await User.findOne({ email: email });
 
     if (existingUser) {
-      return res.status(409).json({ message: "Email already in use" });
+      return res.status(209).json({ message: "Email already in use" });
     }
 
     const newUser = new User({
